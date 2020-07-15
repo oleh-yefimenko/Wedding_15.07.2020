@@ -1,4 +1,5 @@
 /*reset css*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -88,3 +89,266 @@ h6 {
 }
 
 /*--------------------*/
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+body a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 20px;
+}
+
+.header {
+  padding: 6px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 3;
+}
+
+.header__body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  z-index: 3;
+  max-width: 160px;
+}
+
+.header__logo img {
+  width: 100%;
+  display: block;
+}
+
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 3;
+}
+
+.header__list {
+  margin: 0 30px 0 0;
+}
+
+.header__list:last-child {
+  margin: 0;
+}
+
+.header__link {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+@media screen and (max-width: 1000px) {
+  .header__logo {
+    max-width: 120px;
+  }
+}
+
+@media screen and (max-width: 965px) {
+  .header__logo {
+    max-width: 90px;
+  }
+  .header__list {
+    margin: 0 20px 0 0;
+  }
+  .header__link {
+    line-height: 14px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .header__logo {
+    max-width: 120px;
+    position: relative;
+    z-index: 3;
+  }
+  .header__navigation {
+    position: fixed;
+    top: -100%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: #d1a954;
+    padding: 100px 0 0 0;
+  }
+  .header__menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .header__list {
+    margin: 0 0 24px 0;
+  }
+  .header__list:last-child {
+    margin: 0;
+  }
+  .header__link {
+    font-weight: 400;
+  }
+  .header__codepen-mobile {
+    position: relative;
+    padding: 10px 20px 10px 20px;
+    color: #fff;
+    -webkit-transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    border-radius: 50%;
+  }
+  .header__codepen-mobile:before, .header__codepen-mobile:after {
+    content: "";
+    position: absolute;
+    -webkit-transition: inherit;
+    transition: inherit;
+    z-index: -1;
+  }
+  .header__codepen-mobile:hover {
+    color: #d1a954;
+    -webkit-transition-delay: 0.5s;
+            transition-delay: 0.5s;
+  }
+  .header__codepen-mobile:hover:before {
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+  }
+  .header__codepen-mobile:hover:after {
+    background: #fff;
+    -webkit-transition-delay: 0.35s;
+            transition-delay: 0.35s;
+  }
+  .header__link:before, .header__link:after {
+    top: 0;
+    width: 0;
+    height: 100%;
+  }
+  .header__link:before {
+    right: 0;
+    border: 1px solid #fff;
+    border-left: 0;
+    border-right: 0;
+  }
+  .header__link:after {
+    left: 0;
+  }
+  .header__link:hover:before, .header__link:hover:after {
+    width: 100%;
+  }
+  .header__burger {
+    width: 40px;
+    height: 20px;
+    position: relative;
+    position: relative;
+    z-index: 3;
+  }
+  .header__burger span {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #000;
+  }
+  .header__burger::before, .header__burger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #000;
+  }
+  .header__burger::before {
+    top: 0;
+  }
+  .header__burger::after {
+    bottom: 0;
+  }
+}
+
+.header__burger.header-active span {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  background: #d1a954;
+}
+
+.header__burger.header-active::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 9px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  left: 20px;
+  width: 20px;
+  background: #d1a954;
+}
+
+.header__burger.header-active::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 9px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  left: 20px;
+  width: 20px;
+  background: #d1a954;
+}
+
+.header__navigation.header-active {
+  top: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+body.lock body {
+  overflow: hidden;
+}

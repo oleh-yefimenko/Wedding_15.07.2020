@@ -1,0 +1,213 @@
+@media screen and (max-width: 1000px) {
+	.header {
+		&__logo {
+			max-width: 120px;
+		}
+	}
+}
+
+@media screen and (max-width: 965px) {
+	.header {
+		&__logo {
+			max-width: 90px;
+		}
+
+		&__list {
+			margin: 0 20px 0 0;
+		}
+
+		&__link {
+			line-height: 14px;
+		}
+	}
+}
+
+@media screen and (max-width: 880px) {
+	.header {
+		// &__body {
+		// }
+
+		&__logo {
+			max-width: 120px;
+			position: relative;
+			z-index: 3; // добавляем после сверстания выпадаюзего меню, сначала было 5
+		}
+
+		&__navigation {
+			position: fixed;
+			top: -100%;
+			right: 0;
+
+			// width: 200px;
+			// height: 310px;
+
+			width: 100%;
+			height: 100%;
+			overflow: auto; // делаем прокрудку если не прмещаются все пункты меню
+			background: $color-gold;
+			padding: 100px 0 0 0;
+		}
+
+		&__menu {
+			flex-direction: column;
+			align-items: flex-end;
+		}
+
+		&__list {
+			margin: 0 0 24px 0;
+		}
+		&__list:last-child {
+			margin: 0;
+		}
+
+		&__link {
+			font-weight: 400;
+		}
+
+		//-----------> начало анимация кнопок навигации
+		&__codepen-mobile {
+			position: relative;
+			padding: 10px 20px 10px 20px;
+			// padding: 1.4rem 4.2rem;
+			// padding-right: 3.1rem;
+			// font-size: 1.4rem;
+			// letter-spacing: 1.1rem;
+			// text-transform: uppercase;
+			color: $color-white;
+
+			transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+			cursor: pointer;
+			user-select: none;
+			border-radius: 50%;
+		}
+
+		&__codepen-mobile:before,
+		&__codepen-mobile:after {
+			content: "";
+			position: absolute;
+			transition: inherit;
+			z-index: -1;
+			// border-radius: 5px 0 0 5px; // зубы при наводке
+		}
+
+		&__codepen-mobile:hover {
+			color: $color-gold;
+			transition-delay: 0.5s;
+			// border-radius: 5px 0 0 5px;
+		}
+
+		&__codepen-mobile:hover:before {
+			transition-delay: 0s;
+			// border-radius: 5px 0 0 5px;
+		}
+
+		&__codepen-mobile:hover:after {
+			background: $color-white;
+			transition-delay: 0.35s;
+			// border-radius: 5px 0 0 5px;
+		}
+
+		&__link:before,
+		&__link:after {
+			top: 0;
+			width: 0;
+			height: 100%;
+		}
+
+		&__link:before {
+			right: 0;
+			border: 1px solid $color-white;
+			border-left: 0;
+			border-right: 0;
+		}
+
+		&__link:after {
+			left: 0;
+		}
+
+		&__link:hover:before,
+		&__link:hover:after {
+			width: 100%;
+		}
+		//<---------- конец анимации кнопок навигации
+
+		//-----------> начало menu burger
+		&__burger {
+			// display: block;
+			width: 40px;
+			height: 20px;
+			position: relative;
+
+			position: relative; // достаем menu burger после верстки выпадающего меню
+			z-index: 3; // достаем menu burger после верстки выпадающего меню
+			span {
+				position: absolute;
+				top: 9px;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background: $color-black;
+			}
+		}
+		&__burger::before,
+		&__burger::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background: $color-black;
+		}
+		&__burger::before {
+			top: 0;
+		}
+		&__burger::after {
+			bottom: 0;
+		}
+		//<---------- конец menu burger
+	}
+}
+
+//-----------> начало анимации всплывающего меню
+// анимируем крестик
+.header {
+	&__burger.header-active {
+		span {
+			transform: scale(0);
+			transition: all 0.3s ease 0s;
+			background: $color-gold;
+		}
+	}
+	&__burger.header-active::before {
+		transform: rotate(45deg);
+		top: 9px;
+		transition: all 0.3s ease 0s;
+		left: 20px;
+		width: 20px;
+		background: $color-gold;
+	}
+	&__burger.header-active::after {
+		transform: rotate(-45deg);
+		bottom: 9px;
+		transition: all 0.3s ease 0s;
+		left: 20px;
+		width: 20px;
+		background: $color-gold;
+	}
+}
+
+// анимируем само меню
+.header {
+	&__navigation.header-active {
+		top: 0;
+		transition: all 0.3s ease 0s;
+	}
+}
+//<---------- конец анимации всплывающего меню
+
+// блокируем прокрутку под меню
+body.lock {
+	body {
+		overflow: hidden;
+	}
+}
