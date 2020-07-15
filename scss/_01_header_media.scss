@@ -37,15 +37,14 @@
 			position: fixed;
 			top: -100%;
 			right: 0;
-
-			// width: 200px;
-			// height: 310px;
-
-			width: 100%;
-			height: 100%;
+			width: 230px;
+			height: 330px;
+			// width: 100%;
+			// height: 100%;
 			overflow: auto; // делаем прокрудку если не прмещаются все пункты меню
 			background: $color-gold;
 			padding: 100px 0 0 0;
+			border-radius: 0 0 0 50%;
 		}
 
 		&__menu {
@@ -64,8 +63,12 @@
 			font-weight: 400;
 		}
 
-		//-----------> начало анимация кнопок навигации
-		&__codepen-mobile {
+		//-----------> начало анимация кнопок навигации desctop
+
+		//<---------- конец анимации кнопок навигации desctop
+
+		//-----------> начало анимация кнопок навигации mobile
+		&__animation-mobile {
 			position: relative;
 			padding: 10px 20px 10px 20px;
 			// padding: 1.4rem 4.2rem;
@@ -81,8 +84,8 @@
 			border-radius: 50%;
 		}
 
-		&__codepen-mobile:before,
-		&__codepen-mobile:after {
+		&__animation-mobile:before,
+		&__animation-mobile:after {
 			content: "";
 			position: absolute;
 			transition: inherit;
@@ -90,18 +93,18 @@
 			// border-radius: 5px 0 0 5px; // зубы при наводке
 		}
 
-		&__codepen-mobile:hover {
+		&__animation-mobile:hover {
 			color: $color-gold;
 			transition-delay: 0.5s;
 			// border-radius: 5px 0 0 5px;
 		}
 
-		&__codepen-mobile:hover:before {
+		&__animation-mobile:hover:before {
 			transition-delay: 0s;
 			// border-radius: 5px 0 0 5px;
 		}
 
-		&__codepen-mobile:hover:after {
+		&__animation-mobile:hover:after {
 			background: $color-white;
 			transition-delay: 0.35s;
 			// border-radius: 5px 0 0 5px;
@@ -129,7 +132,7 @@
 		&__link:hover:after {
 			width: 100%;
 		}
-		//<---------- конец анимации кнопок навигации
+		//<---------- конец анимации кнопок навигации mobile
 
 		//-----------> начало menu burger
 		&__burger {
@@ -180,15 +183,17 @@
 	}
 	&__burger.header-active::before {
 		transform: rotate(45deg);
-		top: 9px;
+		// top: 9px;
 		transition: all 0.3s ease 0s;
 		left: 20px;
 		width: 20px;
+		top: 20px;
 		background: $color-gold;
 	}
 	&__burger.header-active::after {
 		transform: rotate(-45deg);
-		bottom: 9px;
+		// bottom: 9px;
+		top: 20px;
 		transition: all 0.3s ease 0s;
 		left: 20px;
 		width: 20px;
