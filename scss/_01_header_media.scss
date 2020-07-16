@@ -16,9 +16,9 @@
 			margin: 0 20px 0 0;
 		}
 
-		&__link {
-			line-height: 14px;
-		}
+		// &__link {
+		// 	line-height: 14px;
+		// }
 	}
 }
 
@@ -26,7 +26,12 @@
 	.header {
 		// &__body {
 		// }
-
+		&__desctop {
+			display: none;
+		}
+		&__mobile {
+			display: flex;
+		}
 		&__logo {
 			max-width: 120px;
 			position: relative;
@@ -136,7 +141,7 @@
 
 		//-----------> начало menu burger
 		&__burger {
-			// display: block;
+			display: block;
 			width: 40px;
 			height: 20px;
 			position: relative;
