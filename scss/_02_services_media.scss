@@ -1,0 +1,188 @@
+@media screen and (max-width: 1400px) {
+	// .services {
+	// 	&__slider {
+	// 	}
+	// }
+
+	.slider {
+		&__card {
+		}
+
+		&__image {
+		}
+
+		&__description {
+			padding: 10px 7px;
+		}
+
+		&__text {
+			padding: 10px 0;
+		}
+
+		&__title {
+			margin: 0 0 10px 0;
+		}
+
+		&__subtitle {
+		}
+
+		&__arrows {
+		}
+
+		&__arrows-line {
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.services {
+		padding: 100px 0;
+	}
+}
+
+@media screen and (max-width: 965px) {
+	.services {
+		padding: 80px 0;
+		&__slider {
+			margin: 0 0 40px 0;
+		}
+	}
+
+	.slider {
+		&__card {
+			margin: 0 6px;
+		}
+
+		&__image {
+		}
+
+		&__description {
+		}
+
+		&__text {
+		}
+
+		&__title {
+		}
+
+		&__subtitle {
+		}
+
+		&__arrows {
+		}
+
+		&__arrows-line {
+		}
+	}
+}
+
+@media screen and (max-width: 815px) {
+	.services {
+		padding: 60px 0;
+		&__slider {
+		}
+	}
+
+	.slider {
+		max-width: 600px;
+		margin: 0 auto 30px auto;
+		&__card {
+			max-width: 300px;
+			min-width: 247px;
+			margin: 0 5px;
+		}
+
+		&__image {
+		}
+
+		&__description {
+			padding: 3px;
+		}
+
+		&__text {
+			padding: 5px;
+		}
+
+		&__title {
+			margin: 0 0 5px 0;
+		}
+
+		&__subtitle {
+		}
+
+		&__arrows {
+		}
+
+		&__arrows-line {
+		}
+	}
+}
+
+@media screen and (max-width: 555px) {
+	.services {
+		&__slider {
+		}
+	}
+
+	.slider {
+		&__card {
+			max-width: 400px;
+			margin: 0;
+		}
+
+		&__image {
+		}
+
+		&__description {
+			padding: 5px;
+		}
+
+		&__text {
+			padding: 10px;
+		}
+
+		&__title {
+		}
+
+		&__subtitle {
+		}
+
+		&__arrows {
+			//----> для перемешения стрелок по бокам
+			// display: none;
+			// padding: 10px;
+			// border-left: 2px solid $color-black;
+			// border-right: 2px solid $color-black;
+			// border-radius: 30px;
+		}
+
+		&__arrows-line {
+		}
+	}
+	//----> для перемешения стрелок по бокам
+	// & .slick-arrow {
+	// 	position: absolute;
+	// 	top: 50%;
+	// 	margin: -50px 0 0 0;
+	// }
+
+	// & .slick-arrow.slick-prev {
+	// 	left: 0;
+	// 	background: url(../img/2_services/arrow-left.svg) no-repeat 0 0 / 100%;
+	// 	width: 30px;
+	// 	height: 50px;
+	// 	z-index: 100;
+	// }
+
+	// & .slick-arrow.slick-next {
+	// 	right: 0;
+	// 	background: url(../img/2_services/arrow-right.svg) no-repeat 0 0 / 100%;
+	// 	width: 30px;
+	// 	height: 50px;
+	// }
+}
+
+.slick-track {
+	justify-content: space-around;
+	// justify-content: center;
+}

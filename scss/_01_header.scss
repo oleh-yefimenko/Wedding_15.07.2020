@@ -6,6 +6,7 @@
 	top: 0;
 	left: 0;
 	z-index: 50;
+	// border-bottom: 1px solid $color-gold;
 	&::before {
 		content: "";
 		position: absolute;
@@ -45,7 +46,7 @@
 	}
 
 	&__list {
-		margin: 0 30px 0 0;
+		margin: 0 12px 0 0;
 	}
 
 	&__list:last-child {
@@ -59,6 +60,9 @@
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
 		color: $color-black;
+		span {
+			padding: 7px 9px;
+		}
 	}
 
 	&__burger {
@@ -70,7 +74,9 @@
 	}
 }
 
-.border-animation {
+//-----------------------> Анимация border
+// свойства и значения
+.header__link-animation {
 	--border-width: 1px;
 	--animation-speed: 0.5s;
 	--color: $color-black;
@@ -79,18 +85,18 @@
 	display: inline-block;
 	border: var(--border-width) solid transparent;
 
-	.border-animation__inner {
+	.header__border-animation {
 		position: relative;
 		display: inline-block;
 		width: 100%;
 		cursor: pointer;
-		padding: 7px 9px;
+		// padding: 7px 9px;
 		background: $color-white;
 		z-index: 1;
 		border: solid var(--border-width) transparent;
 	}
 
-	.border-animation__inner:hover {
+	.header__border-animation:hover {
 		color: $color-gold;
 		transition: all 0.7s ease 0s;
 	}
@@ -117,13 +123,13 @@
 		animation: borderColors var(--animation-speed) steps(1) forwards;
 		outline: none;
 
-		.border-animation__inner {
+		.header__border-animation {
 			animation: background calc(var(--animation-speed) / 5 * 3) forwards ease-in-out;
 			animation-delay: calc(var(--animation-speed) / 5 * 2);
 		}
 	}
 }
-
+// сама анимация
 @keyframes beforeBorders {
 	0% {
 		top: calc(var(--border-width) * -1);
@@ -220,3 +226,4 @@
 		border-left-color: $color-gold;
 	}
 }
+//<----------------------- конец анимации

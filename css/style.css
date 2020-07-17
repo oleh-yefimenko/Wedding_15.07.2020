@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*reset css*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
 * {
@@ -91,7 +92,7 @@ h6 {
 /*--------------------*/
 body {
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 body a {
@@ -101,7 +102,7 @@ body a {
 
 .container {
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1840px;
   padding: 0 20px;
 }
 
@@ -163,7 +164,7 @@ body a {
 }
 
 .header__list {
-  margin: 0 30px 0 0;
+  margin: 0 12px 0 0;
 }
 
 .header__list:last-child {
@@ -179,6 +180,10 @@ body a {
   color: #000;
 }
 
+.header__link span {
+  padding: 7px 9px;
+}
+
 .header__burger {
   display: none;
 }
@@ -187,7 +192,7 @@ body a {
   display: none;
 }
 
-.border-animation {
+.header__link-animation {
   --border-width: 1px;
   --animation-speed: 0.5s;
   --color: $color-black;
@@ -197,46 +202,45 @@ body a {
   border: var(--border-width) solid transparent;
 }
 
-.border-animation .border-animation__inner {
+.header__link-animation .header__border-animation {
   position: relative;
   display: inline-block;
   width: 100%;
   cursor: pointer;
-  padding: 7px 9px;
   background: #fff;
   z-index: 1;
   border: solid var(--border-width) transparent;
 }
 
-.border-animation .border-animation__inner:hover {
+.header__link-animation .header__border-animation:hover {
   color: #d1a954;
   -webkit-transition: all 0.7s ease 0s;
   transition: all 0.7s ease 0s;
 }
 
-.border-animation:before, .border-animation:after {
+.header__link-animation:before, .header__link-animation:after {
   content: "";
   position: absolute;
   background: #d1a954;
 }
 
-.border-animation:focus:before, .border-animation:hover:before {
+.header__link-animation:focus:before, .header__link-animation:hover:before {
   -webkit-animation: beforeBorders var(--animation-speed) forwards ease-in-out;
           animation: beforeBorders var(--animation-speed) forwards ease-in-out;
 }
 
-.border-animation:focus:after, .border-animation:hover:after {
+.header__link-animation:focus:after, .header__link-animation:hover:after {
   -webkit-animation: afterBorders var(--animation-speed) forwards ease-in-out;
           animation: afterBorders var(--animation-speed) forwards ease-in-out;
 }
 
-.border-animation:focus, .border-animation:hover {
+.header__link-animation:focus, .header__link-animation:hover {
   -webkit-animation: borderColors var(--animation-speed) steps(1) forwards;
           animation: borderColors var(--animation-speed) steps(1) forwards;
   outline: none;
 }
 
-.border-animation:focus .border-animation__inner, .border-animation:hover .border-animation__inner {
+.header__link-animation:focus .header__border-animation, .header__link-animation:hover .header__border-animation {
   -webkit-animation: background calc(var(--animation-speed) / 5 * 3) forwards ease-in-out;
           animation: background calc(var(--animation-speed) / 5 * 3) forwards ease-in-out;
   -webkit-animation-delay: calc(var(--animation-speed) / 5 * 2);
@@ -437,6 +441,291 @@ body a {
   }
 }
 
+.services {
+  padding: 130px 0 120px 0;
+  color: #fff;
+}
+
+.slider {
+  margin: 0 -15px 60px -15px;
+  padding: 0;
+  min-width: 0;
+}
+
+.slider__card {
+  max-width: 580px;
+  min-width: 0;
+  margin: 0 15px;
+  position: relative;
+}
+
+.slider__image {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.slider__image img {
+  width: 100%;
+}
+
+.slider__description {
+  position: absolute;
+  width: 100%;
+  padding: 20px 15px;
+  left: 0;
+  bottom: 0;
+  background: rgba(209, 169, 84, 0.9);
+  text-align: center;
+}
+
+.slider__text {
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 22px 0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.slider__title {
+  margin: 0 0 20px 0;
+  font-size: 30px;
+  line-height: 37px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 135%;
+}
+
+.slider__subtitle {
+  font-size: 14px;
+  line-height: 135%;
+}
+
+.slider__subtitle span {
+  display: block;
+}
+
+.slider__arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 172px;
+  margin: 0 auto;
+}
+
+.slider__arrows-line {
+  width: 144px;
+  height: 1px;
+  display: block;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.slick-arrow {
+  font-size: 0;
+  width: 5px;
+  height: 9px;
+}
+
+.slick-prev {
+  display: block;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  margin: -1px 9px 0 0;
+  background: url(../img/2_services/arrow-left.svg) no-repeat center center;
+}
+
+.slick-next {
+  display: block;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  margin: -1px 0 0 9px;
+  background: url(../img/2_services/arrow-right.svg) no-repeat center center;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  /* Скрывает слайдер, чтобы можно было создать свой */
+  max-width: 144px;
+  /* Указание параметра ширины требуется для Firefox. */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  outline: none;
+  /* Убирает голубую границу у элемента. Хотя, возможно, и стоит создавать некоторое оформления для состояния фокуса в целях обеспечения доступности. */
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 3px;
+  margin: -1px 0 0 0;
+  width: 20px;
+  background: #000;
+  cursor: pointer;
+  margin-top: center;
+  /* Вам нужно указать значение для поля в Chrome, но в Firefox и IE это происходит автоматически */
+}
+
+/* Тоже самое для Firefox */
+input[type="range"]::-moz-range-thumb {
+  height: 3px;
+  width: 20px;
+  margin: -1px 0 0 0;
+  background: #000;
+  cursor: pointer;
+  margin-top: center;
+}
+
+/* Тоже самое для IE */
+input[type="range"]::-ms-thumb {
+  height: 3px;
+  width: 20px;
+  margin: -1px 0 0 0;
+  background: #000;
+  cursor: pointer;
+  margin-top: center;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  min-width: 144px;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  min-width: 144px;
+  height: 1px;
+  margin: -1px 0 0 0;
+  cursor: pointer;
+  background: #e5e5e5;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  height: 3px;
+  width: 20px;
+  margin: -1px 0 0 0;
+  background: #000;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #e5e5e5;
+}
+
+input[type="range"]::-moz-range-track {
+  min-width: 144px;
+  height: 1px;
+  cursor: pointer;
+  background: #e5e5e5;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 3px;
+  width: 20px;
+  margin: -1px 0 0 0;
+  background: #000;
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-track {
+  max-width: 144px;
+  height: 1px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: #e5e5e5;
+}
+
+input[type="range"]::-ms-fill-upper {
+  background: #e5e5e5;
+}
+
+input[type="range"]::-ms-thumb {
+  height: 3px;
+  width: 20px;
+  margin: -1px 0 0 0;
+  background: #000;
+  cursor: pointer;
+}
+
+input[type="range"]:focus::-ms-fill-lower {
+  background: #e5e5e5;
+}
+
+input[type="range"]:focus::-ms-fill-upper {
+  background: #e5e5e5;
+}
+
+/* Слайдер */
+.slick-slider {
+  position: relative;
+  z-index: 1;
+}
+
+/* Слайдер запущен */
+/* Слайдер с точками */
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* Слайд */
+/* Слайд активный (показывается) */
+/* Слайд основной */
+/* Слайд по центру */
+/* Клонированный слайд */
+/* Стрелка */
+/* Стрелка влево */
+/* Стрелка вправо */
+/* Стрелка не активная */
+/* Точки (булиты) */
+/* Активная точка */
+/* Элемент точки */
+@media screen and (max-width: 815px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .header__logo {
     max-width: 120px;
@@ -447,12 +736,21 @@ body a {
   .header__logo {
     max-width: 90px;
   }
+}
+
+@media screen and (max-width: 815px) {
   .header__list {
-    margin: 0 20px 0 0;
+    margin: 0 3px 0 0;
   }
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 790px) {
+  .header__logo {
+    max-width: 68px;
+  }
+}
+
+@media screen and (max-width: 750px) {
   .header__desctop {
     display: none;
   }
@@ -462,20 +760,21 @@ body a {
     display: flex;
   }
   .header__logo {
-    max-width: 120px;
+    margin: 0 0 0 50px;
+    width: 90px;
     position: relative;
     z-index: 3;
   }
   .header__navigation {
     position: fixed;
-    top: -100%;
+    top: -200%;
     right: 0;
-    width: 230px;
-    height: 330px;
+    width: 200px;
+    height: 100%;
     overflow: auto;
     background: #d1a954;
-    padding: 100px 0 0 0;
-    border-radius: 0 0 0 50%;
+    padding: 75px 0 0 0;
+    border-left: 2px solid #fff;
   }
   .header__menu {
     -webkit-box-orient: vertical;
@@ -547,8 +846,9 @@ body a {
     width: 100%;
   }
   .header__burger {
+    margin: 0 50px 0 0;
     display: block;
-    width: 40px;
+    width: 30px;
     height: 20px;
     position: relative;
     position: relative;
@@ -578,6 +878,17 @@ body a {
   }
 }
 
+@media screen and (max-width: 555px) {
+  .header__navigation {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  body.lock {
+    overflow: hidden;
+  }
+}
+
 .header__burger.header-active span {
   -webkit-transform: scale(0);
           transform: scale(0);
@@ -589,8 +900,8 @@ body a {
 .header__burger.header-active::before {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
   left: 20px;
   width: 20px;
   top: 20px;
@@ -601,8 +912,8 @@ body a {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   top: 20px;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
   left: 20px;
   width: 20px;
   background: #d1a954;
@@ -610,10 +921,78 @@ body a {
 
 .header__navigation.header-active {
   top: 0;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.6s ease 0s;
+  transition: all 0.6s ease 0s;
 }
 
-body.lock body {
-  overflow: hidden;
+@media screen and (max-width: 1400px) {
+  .slider__description {
+    padding: 10px 7px;
+  }
+  .slider__text {
+    padding: 10px 0;
+  }
+  .slider__title {
+    margin: 0 0 10px 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .services {
+    padding: 100px 0;
+  }
+}
+
+@media screen and (max-width: 965px) {
+  .services {
+    padding: 80px 0;
+  }
+  .services__slider {
+    margin: 0 0 40px 0;
+  }
+  .slider__card {
+    margin: 0 6px;
+  }
+}
+
+@media screen and (max-width: 815px) {
+  .services {
+    padding: 60px 0;
+  }
+  .slider {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+  }
+  .slider__card {
+    max-width: 300px;
+    min-width: 247px;
+    margin: 0 5px;
+  }
+  .slider__description {
+    padding: 3px;
+  }
+  .slider__text {
+    padding: 5px;
+  }
+  .slider__title {
+    margin: 0 0 5px 0;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .slider__card {
+    max-width: 400px;
+    margin: 0;
+  }
+  .slider__description {
+    padding: 5px;
+  }
+  .slider__text {
+    padding: 10px;
+  }
+}
+
+.slick-track {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }

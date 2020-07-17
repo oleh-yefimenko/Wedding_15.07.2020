@@ -1,0 +1,294 @@
+.services {
+	padding: 130px 0 120px 0;
+	color: $color-white;
+	// &__slider {
+	// }
+}
+
+.slider {
+	margin: 0 -15px 60px -15px;
+	padding: 0;
+	min-width: 0;
+	&__card {
+		max-width: 580px;
+		min-width: 0;
+		margin: 0 15px;
+		position: relative;
+	}
+
+	&__image {
+		top: 0;
+		left: 0;
+		width: 100%;
+		img {
+			width: 100%;
+		}
+	}
+
+	&__description {
+		position: absolute;
+		width: 100%;
+		padding: 20px 15px;
+		left: 0;
+		bottom: 0;
+		background: rgba(209, 169, 84, 0.9);
+		text-align: center;
+	}
+
+	&__text {
+		max-width: 550px;
+		margin: 0 auto;
+		padding: 22px 0;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+	}
+
+	&__title {
+		margin: 0 0 20px 0;
+		font-size: 30px;
+		line-height: 37px;
+		text-transform: uppercase;
+		font-size: 14px;
+		line-height: 135%;
+	}
+
+	&__subtitle {
+		font-size: 14px;
+		line-height: 135%;
+		span {
+			display: block;
+		}
+	}
+	//-----> стилизация кнопок Slick-Slider
+	// &__arrows - блок, куда перенес кнопки
+	&__arrows {
+		// position: relative;
+		// width: 172px;
+		// height: 18px;
+		// margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 172px;
+		margin: 0 auto;
+	}
+
+	&__arrows-line {
+		// position: absolute;
+		// left: 25%;
+
+		width: 144px;
+		height: 1px;
+		display: block;
+		order: 2;
+	}
+	& .slick-arrow.slick-prev {
+	}
+}
+
+.slick-arrow {
+	// position: absolute;
+	// top: 50%;
+	font-size: 0;
+	width: 5px;
+	height: 9px;
+}
+
+// .slick-arrow {
+
+// }
+
+.slick-prev {
+	display: block;
+	order: 1;
+	margin: -1px 9px 0 0;
+	background: url(../img/2_services/arrow-left.svg) no-repeat center center;
+}
+
+.slick-next {
+	display: block;
+	order: 3;
+	margin: -1px 0 0 9px;
+	background: url(../img/2_services/arrow-right.svg) no-repeat center center;
+}
+//--------------------------------------------------------------------------------
+// оформление ползунка на input
+input[type="range"] {
+	-webkit-appearance: none; /* Скрывает слайдер, чтобы можно было создать свой */
+	max-width: 144px; /* Указание параметра ширины требуется для Firefox. */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+	outline: none; /* Убирает голубую границу у элемента. Хотя, возможно, и стоит создавать некоторое оформления для состояния фокуса в целях обеспечения доступности. */
+}
+
+input[type="range"]::-ms-track {
+	width: 100%;
+	cursor: pointer;
+	background: transparent; /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+	border-color: transparent;
+	color: transparent;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 3px;
+	margin: -1px 0 0 0; // выравнивиние ползунка по середине
+	width: 20px;
+	background: $color-black;
+	cursor: pointer;
+	margin-top: center; /* Вам нужно указать значение для поля в Chrome, но в Firefox и IE это происходит автоматически */
+}
+
+/* Тоже самое для Firefox */
+input[type="range"]::-moz-range-thumb {
+	height: 3px;
+	width: 20px;
+	margin: -1px 0 0 0; // выравнивиние ползунка по середине
+	background: $color-black;
+	cursor: pointer;
+	margin-top: center;
+}
+
+/* Тоже самое для IE */
+input[type="range"]::-ms-thumb {
+	height: 3px;
+	width: 20px;
+	margin: -1px 0 0 0; // выравнивиние ползунка по середине
+	background: $color-black;
+	cursor: pointer;
+	margin-top: center;
+}
+//------------------------------------------------------------------------------------------------
+input[type="range"] {
+	-webkit-appearance: none;
+	min-width: 144px;
+}
+input[type="range"]:focus {
+	outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+	min-width: 144px;
+	height: 1px;
+	margin: -1px 0 0 0; // выравнивиние ползунка по середине
+	cursor: pointer;
+	background: $color-gray-ligth;
+}
+input[type="range"]::-webkit-slider-thumb {
+	height: 3px;
+	width: 20px;
+	margin: -1px 0 0 0; // выравнивиние ползунка по середине
+	background: $color-black;
+	cursor: pointer;
+	-webkit-appearance: none;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+	background: $color-gray-ligth;
+}
+input[type="range"]::-moz-range-track {
+	min-width: 144px;
+	height: 1px;
+	cursor: pointer;
+	background: $color-gray-ligth;
+}
+input[type="range"]::-moz-range-thumb {
+	height: 3px;
+	width: 20px;
+	margin: -1px 0 0 0; // выравнивиние ползунка по середине
+	background: $color-black;
+	cursor: pointer;
+}
+input[type="range"]::-ms-track {
+	max-width: 144px;
+	height: 1px;
+
+	cursor: pointer;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+input[type="range"]::-ms-fill-lower {
+	background: $color-gray-ligth;
+}
+input[type="range"]::-ms-fill-upper {
+	background: $color-gray-ligth;
+}
+input[type="range"]::-ms-thumb {
+	height: 3px;
+	width: 20px;
+	margin: -1px 0 0 0; // выравнивиние ползунка по середине
+	background: $color-black;
+	cursor: pointer;
+}
+input[type="range"]:focus::-ms-fill-lower {
+	background: $color-gray-ligth;
+}
+input[type="range"]:focus::-ms-fill-upper {
+	background: $color-gray-ligth;
+}
+//-----> конец стилизации кнопок Slick-Slider
+
+/* Слайдер */
+.slick-slider {
+	// margin: 0 -15px;
+	position: relative;
+	z-index: 1;
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+/* Ограничивающая оболочка */
+.slick-list {
+	overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track {
+	display: flex;
+	// justify-content: space-around;
+	justify-content: space-between;
+}
+/* Слайд */
+.slick-slide {
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+}
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+/* Слайд по центру */
+.slick-slide.slick-center {
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
+/* Стрелка */
+.slick-arrow {
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
+/* Точки (булиты) */
+.slick-dots {
+}
+.slick-dots li {
+}
+/* Активная точка */
+.slick-dots li.slick-active {
+}
+/* Элемент точки */
+.slick-dots li button {
+}
