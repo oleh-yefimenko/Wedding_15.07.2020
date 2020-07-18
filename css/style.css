@@ -720,6 +720,182 @@ input[type="range"]:focus::-ms-fill-upper {
 /* Точки (булиты) */
 /* Активная точка */
 /* Элемент точки */
+.restaurant {
+  position: relative;
+  padding: 0 0 90px 0;
+}
+
+.restaurant::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  z-index: -1;
+  bottom: 0;
+  max-height: 765px;
+  background: rgba(126, 126, 126, 0.07);
+}
+
+.restaurant__heading {
+  margin: 0 auto 60px auto;
+  max-width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.restaurant__title {
+  margin: 0 0 25px 0;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 145%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.restaurant__logo {
+  margin: 0 0 10px;
+}
+
+.restaurant__subtitle {
+  font-weight: 300;
+  font-size: 9px;
+  line-height: 11px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.restaurant__video {
+  max-width: 920px;
+  margin: 0 auto 90px auto;
+  border: 10px solid #fff;
+  -webkit-box-shadow: 0px 0px 30px rgba(126, 126, 126, 0.25);
+          box-shadow: 0px 0px 30px rgba(126, 126, 126, 0.25);
+  position: relative;
+}
+
+.restaurant__video img {
+  width: 100%;
+}
+
+.restaurant__video-link {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: url(../img/3_restaurant/play.svg) no-repeat left 29px center/30px, #d1a954;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -40px 0 0 -40px;
+}
+
+.restaurant__text-wrapper {
+  max-width: 1115px;
+  margin: 0 auto;
+}
+
+.restaurant__text-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 -55px 0 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 135%;
+  color: #616161;
+}
+
+.restaurant__block-left {
+  max-width: 355px;
+  margin: 0 70px 0 0;
+}
+
+.restaurant__block-left-img {
+  margin: 0 auto 33px auto;
+  max-width: 202px;
+}
+
+.restaurant__block-left-img img {
+  width: 100%;
+}
+
+.restaurant__block-left-text span {
+  display: block;
+  margin: 0 0 15px 0;
+  color: #000;
+}
+
+.restaurant__block-right {
+  max-width: 540px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.restaurant__block-right-description {
+  max-width: 255px;
+  margin: 0 10px 39px 0;
+}
+
+.restaurant__block-right-description:nth-child(2) {
+  margin: 0 0 30px 0;
+}
+
+.restaurant__block-right-description:nth-child(4) {
+  margin: -20px 0 30px 0;
+}
+
+.restaurant__block-right-title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 20px 0;
+}
+
+.restaurant__block-right-title-image {
+  margin: 0 20px 0 0;
+}
+
+.restaurant__block-right-title-image img {
+  width: 100%;
+}
+
+.restaurant__block-right-title {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000;
+}
+
 @media screen and (max-width: 815px) {
   .container {
     padding: 0 10px;
@@ -995,4 +1171,74 @@ input[type="range"]:focus::-ms-fill-upper {
 .slick-track {
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+@media screen and (max-width: 1200px) {
+  .restaurant__text-content {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .restaurant::before {
+    height: 100%;
+    max-height: 1110px;
+  }
+  .restaurant__text-content {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .restaurant__block-left {
+    margin: 0 30px 0 0;
+  }
+  .restaurant__block-right {
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+    max-width: 270px;
+  }
+  .restaurant__block-right-description {
+    margin: 0 0 30px 0;
+  }
+  .restaurant__block-right-description:nth-child(2) {
+    margin: 0 0 30px 0;
+  }
+  .restaurant__block-right-description:nth-child(4) {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .restaurant::before {
+    height: 100%;
+    max-height: 100%;
+  }
+  .restaurant__video {
+    margin: 0 auto 40px auto;
+  }
+  .restaurant__text-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .restaurant__text-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .restaurant__block-left {
+    margin: 0 0 30px 0;
+  }
+  .restaurant__block-right-title-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
