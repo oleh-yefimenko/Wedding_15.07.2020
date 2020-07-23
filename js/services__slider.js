@@ -3,7 +3,7 @@ $(document).ready(function () {
 		slidesToShow: 3,
 		arrows: true,
 		appendArrows: $('.slider__arrows'),
-		// autoplay: true,
+		autoplay: true,
 		pauseOnFocus: true,
 		pauseOnHover: true,
 		responsive: [

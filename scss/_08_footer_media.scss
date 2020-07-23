@@ -1,0 +1,15 @@
+@media screen and (max-width: 768px) {
+	.footer {
+		padding: 10px 0;
+		&__body {
+			flex-direction: column;
+		}
+
+		&__copyright {
+			margin: 0 0 15px 0;
+		}
+
+		&__social {
+		}
+	}
+}

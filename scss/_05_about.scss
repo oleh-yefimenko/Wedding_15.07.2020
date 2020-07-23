@@ -1,0 +1,41 @@
+.about {
+	padding: 120px 0 120px 0;
+	background: url(../img/5_about/bg-about.jpg) no-repeat center center / cover;
+	&__title {
+		margin: 0 0 70px 0;
+		text-align: center;
+		font-weight: 300;
+		font-size: 36px;
+		line-height: 145%;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: $color-white;
+	}
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 670px;
+		margin: 0 auto;
+	}
+
+	&__link {
+		display: block;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 20px;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: $color-black;
+		background: $color-white;
+	}
+
+	&__plan {
+		padding: 23px 58px;
+		margin: 0 10px 0 0;
+	}
+
+	&__presentation {
+		padding: 22px 46px;
+	}
+}
