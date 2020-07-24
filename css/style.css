@@ -178,7 +178,10 @@ body a {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #000;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .header__link span {
