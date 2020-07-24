@@ -102,11 +102,7 @@
 	order: 1;
 	margin: -1px 9px 0 0;
 	background: url(../img/2_services/arrow-left.svg) no-repeat center center;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.slick-prev:active {
-	background: transparent;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .slick-next {
@@ -114,7 +110,7 @@
 	order: 3;
 	margin: -1px 0 0 9px;
 	background: url(../img/2_services/arrow-right.svg) no-repeat center center;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
 }
 //--------------------------------------------------------------------------------
 // оформление ползунка на input
