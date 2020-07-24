@@ -274,6 +274,9 @@ input[type="range"]:focus::-ms-fill-upper {
 /* Стрелка */
 .slick-arrow {
 }
+.slick-arrow:active {
+	background: transparent;
+}
 /* Стрелка влево */
 .slick-arrow.slick-prev {
 }
