@@ -13,3 +13,11 @@
 		}
 	}
 }
+
+@media screen and (max-width: 350px) {
+	.footer {
+		&__copyright {
+			display: none;
+		}
+	}
+}

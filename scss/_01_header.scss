@@ -60,7 +60,7 @@
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
 		color: $color-black;
-		user-select: none; //////////////////////////////////////////////////////////////////////////////
+		user-select: none; // пропадает синий фон при нажатии на телефоне
 		span {
 			padding: 7px 9px;
 		}
