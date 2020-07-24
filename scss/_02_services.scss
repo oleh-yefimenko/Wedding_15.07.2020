@@ -102,7 +102,7 @@
 	order: 1;
 	margin: -1px 9px 0 0;
 	background: url(../img/2_services/arrow-left.svg) no-repeat center center;
-	-webkit-tap-highlight-color: transparent;
+	user-select: none; //////////////////////////////////////////////////////////////////////////////
 }
 
 .slick-next {
@@ -110,7 +110,7 @@
 	order: 3;
 	margin: -1px 0 0 9px;
 	background: url(../img/2_services/arrow-right.svg) no-repeat center center;
-	-webkit-tap-highlight-color: transparent;
+	user-select: none; //////////////////////////////////////////////////////////////////////////////
 }
 //--------------------------------------------------------------------------------
 // оформление ползунка на input
