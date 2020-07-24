@@ -543,6 +543,10 @@ body a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.slick-prev:active {
+  background: transparent;
+}
+
 .slick-next {
   display: block;
   -webkit-box-ordinal-group: 4;
@@ -716,10 +720,6 @@ input[type="range"]:focus::-ms-fill-upper {
 /* Слайд по центру */
 /* Клонированный слайд */
 /* Стрелка */
-.slick-arrow:active {
-  background: transparent;
-}
-
 /* Стрелка влево */
 /* Стрелка вправо */
 /* Стрелка не активная */
