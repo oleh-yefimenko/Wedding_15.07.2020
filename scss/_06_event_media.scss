@@ -1,0 +1,221 @@
+@media screen and (max-width: 1100px) {
+	.event {
+		padding: 80px 0;
+		&__body {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__text {
+			margin: 0;
+			flex: 0 0 480px;
+			justify-content: space-between;
+		}
+
+		&__title {
+		}
+
+		&__subtitle {
+		}
+
+		&__information-cafe {
+		}
+
+		&__restaurant {
+		}
+
+		&__restaurant-title {
+		}
+
+		&__restaurant-item {
+		}
+
+		&__restaurant-image {
+		}
+
+		&__restaurant-text {
+		}
+
+		&__office {
+		}
+
+		&__office-title {
+		}
+
+		&__office-item {
+		}
+
+		&__office-image {
+		}
+
+		&__office-text {
+		}
+
+		&__information-user {
+			width: 100%;
+		}
+
+		&__form {
+		}
+
+		&__input {
+		}
+
+		&__textarea {
+		}
+
+		&__button {
+		}
+	}
+	.container {
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.event {
+		padding: 50px 0;
+		text-align: center;
+		&__body {
+		}
+
+		&__text {
+		}
+
+		&__title {
+		}
+
+		&__subtitle {
+		}
+
+		&__information-cafe {
+		}
+
+		&__restaurant {
+		}
+
+		&__restaurant-title {
+		}
+
+		&__restaurant-item {
+		}
+
+		&__restaurant-image {
+		}
+
+		&__restaurant-text {
+		}
+
+		&__office {
+		}
+
+		&__office-title {
+		}
+
+		&__office-item {
+		}
+
+		&__office-image {
+		}
+
+		&__office-text {
+		}
+
+		&__information-user {
+			width: 100%;
+		}
+
+		&__form {
+		}
+
+		&__input {
+		}
+
+		&__textarea {
+		}
+
+		&__button {
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.event {
+		padding: 30px 0;
+		&__body {
+		}
+
+		&__text {
+		}
+
+		&__title {
+			margin: 0 0 20px 0;
+		}
+
+		&__subtitle {
+			margin: 0 0 30px 0;
+		}
+
+		&__information-cafe {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__restaurant {
+			margin: 0 0 20px 0;
+		}
+
+		&__restaurant-title {
+			margin: 0 0 20px 0;
+		}
+
+		&__restaurant-item {
+			margin: 0 0 15px 0;
+			width: 250px;
+		}
+
+		&__restaurant-image {
+		}
+
+		&__restaurant-text {
+			text-align: left;
+		}
+
+		&__office {
+			margin: 0 0 20px 0;
+		}
+
+		&__office-title {
+			margin: 0 0 20px 0;
+		}
+
+		&__office-item {
+			margin: 0 0 20px 0;
+			width: 250px;
+		}
+
+		&__office-image {
+		}
+
+		&__office-text {
+			text-align: left;
+		}
+
+		&__information-user {
+			width: 100%;
+			flex: 0 0 430px;
+		}
+
+		&__form {
+		}
+
+		&__input {
+		}
+
+		&__textarea {
+		}
+
+		&__button {
+			margin: 0 auto;
+		}
+	}
+}

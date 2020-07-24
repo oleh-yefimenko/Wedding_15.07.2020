@@ -14,7 +14,6 @@
 </head>
 
 <body>
-
 	<header id="header" class="header">
 		<div class="container">
 			<div class="header__body">
@@ -336,6 +335,93 @@
 					<a href="#" download class="about__link about__presentation">скачать презинтация</a>
 
 				</div>
+			</div>
+		</section>
+
+		<section id="event" class="event">
+			<div class="container">
+
+				<div class="event__body">
+
+					<div class="event__text">
+						<h2 class="event__title">хотите провести мероприятие?</h2>
+						<p class="event__subtitle">
+							Или у вас остались вопросы, на которые мы сможем вам ответить
+							в процессе разговора - напишите нам. Мы открыты для диалога!
+						</p>
+
+						<div class="event__information-cafe">
+
+							<div class="event__restaurant">
+								<h3 class="event__restaurant-title">ресторан</h3>
+
+								<div class="event__restaurant-item">
+									<div class="event__restaurant-image">
+										<img src="img/6_event/map.svg" alt="Логотип карты">
+									</div>
+									<p class="event__restaurant-text">Санкт-Петербургское <span>шоссе, д 130, к. 7</span></p>
+								</div>
+
+								<div class="event__restaurant-item">
+									<div class="event__restaurant-image">
+										<img src="img/6_event/phone.svg" alt="Логотип телефона">
+									</div>
+									<p class="event__restaurant-text">+7 (812) 210 67 95</p>
+								</div>
+
+								<div class="event__restaurant-item">
+									<div class="event__restaurant-image">
+										<img src="img/6_event/letter.svg" alt="Логотип письма">
+									</div>
+									<p class="event__restaurant-text">hello@summerpalace.ru</p>
+								</div>
+							</div>
+
+							<div class="event__office">
+								<h3 class="event__office-title">офис</h3>
+
+								<div class="event__office-item">
+									<div class="event__office-image">
+										<img src="img/6_event/map.svg" alt="Логотип карты">
+									</div>
+									<p class="event__office-text">ст. м. «Лиговский проспект», <span>ул. Черняховского, д. 75</span></p>
+								</div>
+
+								<div class="event__office-item">
+									<div class="event__office-image">
+										<img src="img/6_event/phone.svg" alt="Логотип телефона">
+									</div>
+									<p class="event__office-text">+7 (812) 210 67 95</p>
+								</div>
+
+								<div class="event__office-item">
+									<div class="event__office-image">
+										<img src="img/6_event/letter.svg" alt="Логотип письма">
+									</div>
+									<p class="event__office-text">hello@summerpalace.ru</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="event__information-user">
+						<form action="php/mail.php" method="POST" enctype="multipart/form-data" class="event__form">
+							<input type="text" tabindex="1" name="user_name" placeholder="Ваше имя" class="event__input">
+							<input type="email" tabindex="2" name="user_email" placeholder="Ваш e-mail" class="event__input">
+							<textarea name="user_info" tabindex="3" placeholder="Сообщение" class="event__textarea"></textarea>
+							<button type="submit" tabindex="4" class="event__button">отправить</button>
+						</form>
+					</div>
+
+				</div>
+
+			</div>
+			<div class="event__location">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2002.9529330769476!2d29.974613315907483!3d59.866527674876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469638b11d37a16d%3A0x65bd5859a2ed5911!2z0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LPRgdC60L7QtSDRiC4sIDEzMCDQutC-0YDQv9GD0YEgNywg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjywgMTk4NTE1!5e0!3m2!1sru!2spl!4v1595608088697!5m2!1sru!2spl"
+					width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+					tabindex="0"></iframe>
 			</div>
 		</section>
 
